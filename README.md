@@ -26,4 +26,4 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
-It an application that allows a user to bookmark URLs via email, peruse other user's bookmarks and maintain a personal index of categorized bookmarks.
+It  a social book marking  application that allows a user to bookmark URLs via email, share favorite bookmark with freinds, allows to use others bookmarks and maintains bookmarks by personalized categorization. 
