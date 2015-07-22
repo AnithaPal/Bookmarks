@@ -12,6 +12,9 @@
       <ul class="nav nav-tabs">
         <li> <%= link_to "Bookmarks", welcome_index_path %> </li>
         <li> <%= link_to "About", welcome_about_path %> </li>
+        <div class="pull-right">
+          <%= link_to "Sign up", new_user_registration_path %> 
+        </div>  
       </ul>  
       <%= yield %>
       <% flash.each do |key, value| %>
