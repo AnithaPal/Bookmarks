@@ -62,4 +62,5 @@ group  :test do
 end  
 
 gem 'bootstrap-sass'
+gem 'devise'
 
