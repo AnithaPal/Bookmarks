@@ -26,5 +26,23 @@ header{
 
 .body{
   padding-top: 70px;
+  background-color: #303030;
+  color: white;
+  letter-spacing: 0.0625em;
+  line-height: 1px;
+}
 
+.user{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.0625em;
+  
+}
+
+.nav ul li{
+ text-align:center; 
+ display:inline; 
+ color: white;
 }
