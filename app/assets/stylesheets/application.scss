@@ -16,12 +16,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.user-info {
-  margin-top: 10px;
-
+header{
+  padding: 20px;
 }
 
-.nav {
-  margin-top: 5px;
+.nav li{
+  padding-left: 5px;
 }
 
+.body{
+  padding-top: 70px;
+
+}
