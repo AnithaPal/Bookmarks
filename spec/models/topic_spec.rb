@@ -8,7 +8,7 @@ RSpec.describe Topic, :type => :model do
   it "is invalid without a title" do
     topic = build(:topic, title:nil)
     topic.valid? 
-    expect(topic.errors[:title]).not_to include("can't be blank")
+    expect(topic.errors[:title]).to include("can't be blank")
    end
 
 end
