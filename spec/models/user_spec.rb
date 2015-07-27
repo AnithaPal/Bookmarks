@@ -3,38 +3,31 @@
 RSpec.describe User, :type => :model do
   describe User do
     it "is  valid with name, email and password" do
-      user = User.new(
-        name: 'User1',
-        email: 'user1@example.com',
-        password: 'helloworld')
-      expect(user).to be_valid?
-    end  
+      expect(build(:user)).to be_valid
+    end
+
     it "is invalid without a name" do
-      user = User.new(name: nil)
+      user = build(:user, name: nil)
       user.valid?
       expect(user.errors[:name]).to include("can't be blank")
-    end  
+    end
+
     it "is invalid without an email" do
-      user = User.new(email: nil)
+      user = build(:user, email: nil)
       user.valid?
       expect(user.errors[:email]).to include("can't be blank")
-    end  
+    end
+
     it "is invalid without a password" do
-      user = User.new(password: nil)
+      user = build(:user, password: nil)
       user.valid?
       expect(user.errors[:password]).to include("can't be blank")
-    end  
+    end
 
     it "is invalid with duplicate email address" do
-      User.create(
-        name: 'user2',
-        email: 'user2@example.com',
-        password: 'helloworld')
-
-      user = User.new(
-        name: 'user',
-        email: 'user2@example.com',
-        password: 'helloworld')
+      
+      create(:user, email: 'john@example.com')
+      user = build(:user, email: 'john@example.com')
       user.valid?
       expect(user.errors[:email]).to include("has already been taken")
     end  
