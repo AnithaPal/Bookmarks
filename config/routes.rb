@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  
+  post :incoming, to: 'incoming#create'
 
   get 'welcome/about'
 
