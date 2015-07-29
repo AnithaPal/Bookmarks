@@ -1,5 +1,5 @@
 class IncomingController < ApplicationController
-  skip_before_action :verify_authenticity_token, only : [:create]
+  skip_before_action :verify_authenticity_token, only: [:create]
 
   def create
      puts "INCOMING PARAMS HERE: #{params}"
@@ -7,6 +7,9 @@ class IncomingController < ApplicationController
      @topic = Topic.find_by(title: params[:subject])
      @url = params["body_plain"]
 
-  end   
+
+     head 200
+
+  end
 
 end
