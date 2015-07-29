@@ -1,16 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
-      <h4> All Bookmarkd </h4>
-        <%= topics.each do  |topic| %>
-          <div class="media">
-            <div class="media-body">
-              <h4 class="media-heding">
-                <%= link_to topic.title, topic %>
-              </h4>
-            </div>
-          </div>
-        <% end %>
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="text-center">All Bookmarks</h1>
+      <% @topics.each do |topic| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading text-justify">
+          <%= link_to topic.title, topic %>
+          </h4>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-md-2">
     </div>
   </div>
 </div>
+
+

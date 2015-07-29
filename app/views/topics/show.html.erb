@@ -1,2 +1,5 @@
-<h1>Topics#show</h1>
-<p>Find me in app/views/topics/show.html.erb</p>
+<h1> <%= @topic.title %> </h1>
+
+<%= link_to "Edit", edit_topic_path , class: 'btn btn-success' %>
+<%= link_to "Delete", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you wnat to delete?'} %>
+<%= link_to "Back", topics_path,  class: 'btn btn-success' %>

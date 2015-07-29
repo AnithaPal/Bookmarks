@@ -38,7 +38,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(Params[:id])
+    @topic = Topic.find(params[:id])
     if @topic.destroy
       flash[:notice] = "Topic was successfully deleted"
       redirect_to topics_path
@@ -53,5 +53,5 @@ class TopicsController < ApplicationController
   def topics_params
     params.require(:topic).permit(:title)
   end
-  
+
 end
