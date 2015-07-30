@@ -46,7 +46,16 @@ end
 
 topics = Topic.all
 
+30.times do
+  bookmark = Bookmark.new(
+    topic: topics.sample,
+    url: Faker::Internet.url('example.com'),
+    user: users.sample)
+  bookmark.save!
+end
+
 puts "Seeding Finished"
 puts "#{User.count} users created."
 puts "#{Topic.count} topics created."
+puts "#{Bookmark.count} bookmarks created."
 

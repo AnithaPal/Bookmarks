@@ -18,33 +18,47 @@
 
 header{
   padding: 20px;
-  height: 150px;
+  height: 125px;
 }
 
-.nav li{
-  padding-left: 5px;
-  // float: none;
+.navbar-brand{
+  padding: 5px;
+
 }
 
-.body{
+.content{
   padding-top: 70px;
-  background-color: #303030;
-  color: white;
+  background-color: white;
   letter-spacing: 0.0625em;
   line-height: 1px;
 }
 
-.user{
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: sans-serif;
-  letter-spacing: 0.0625em;
+.flash-msg{
+  padding-top: 100px;
+  float: left;
+  width: 100%;
+  background-color: #FF6666;
   
 }
 
-.nav ul li{
- text-align:center; 
- display:inline; 
- color: white;
+.other-content{
+  padding-top: 70px;
+  margin: auto;
 }
+
+
+
+.nav li{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.footer small{
+  padding-top: 60px;
+  background-color: white;
+  text-align: center;
+  
+}
+

@@ -17,7 +17,7 @@ class TopicsController < ApplicationController
       flash[:notice] = "Topic was created successfully"
       redirect_to @topic
     else
-      flash[:error] = "There was an error creating your topic. Please try again"
+      flash[:error] = "Sorry, there was an error creating your topic. Please try again"
       render :new
     end
   end
@@ -32,7 +32,7 @@ class TopicsController < ApplicationController
       flash[:notice] = "Topics was updated successfully"
       redirect_to @topic
     else
-      flash[:error] = "There was an error updating your topic. Please try again"
+      flash[:error] = "Sorry, there was an error updating your topic. Please try again"
       render :edit
     end
   end
@@ -43,7 +43,7 @@ class TopicsController < ApplicationController
       flash[:notice] = "Topic was successfully deleted"
       redirect_to topics_path
     else
-      flash[:error] = "There was an error deleting your topic. Please try again."
+      flash[:error] = "Sorry, there was an error deleting your topic. Please try again."
     end
   end
 
