@@ -10,7 +10,7 @@
       <h1 class="text-center"> <%= @topic.title %> </h1>
       <% @topic.bookmarks.each do |bookmark| %>
        <h4> <%= link_to "#{bookmark.url}", topic_bookmark_path(bookmark.topic, bookmark) %> </h4>
-      <% end %>  
+      <% end %>
     </div>
   </div>
 </div>
