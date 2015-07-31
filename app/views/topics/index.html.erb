@@ -2,6 +2,10 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h1 class="text-center">All Topics</h1>
+      <div class="text-center">
+        <% if policy(Topic.new).create? %>
+          <%= link_to "New Topic", new_topic_path, class: 'btn btn-primary'%>
+        <% end %>
       <% @topics.each do |topic| %>
       <div class="media">
         <div class="media-body">
