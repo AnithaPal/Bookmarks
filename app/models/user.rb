@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
+
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true

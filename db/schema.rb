@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731133359) do
+ActiveRecord::Schema.define(version: 20150801112026) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string   "url"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20150731133359) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "avatar"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
