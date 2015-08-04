@@ -13,10 +13,11 @@ class BookmarksController < ApplicationController
   def create
     @topic = Topic.friendly.find(params[:topic_id])
     @user = current_user
-    @bookmark = Bookmark.new(bookmark_params)
+    @bookmark = Bookmark.build_card(bookmark_params)
     @bookmark.topic = @topic
     @bookmark.user = current_user
-     authorize @bookmark
+    authorize @bookmark
+
     if @bookmark.save
       flash[:notice] = "Bookmark was created successfully"
       redirect_to [@topic, @bookmark]

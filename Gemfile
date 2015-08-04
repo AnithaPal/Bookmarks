@@ -72,4 +72,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'friendly_id', '~> 5.0'
+gem 'link_thumbnailer'
 
