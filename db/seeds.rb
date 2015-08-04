@@ -38,7 +38,7 @@ users = User.all
 20.times do
   topic = Topic.new(
     user: users.sample,
-    title: Faker::Lorem.word
+    title: "##{Faker::Lorem.word}"
     )
   topic.save!
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'users/show'
 
   devise_for :users
-  resources :users, only: [:show]
+  resources :users, only: [:show, :update]
 
   post :incoming, to: 'incoming#create'
 
