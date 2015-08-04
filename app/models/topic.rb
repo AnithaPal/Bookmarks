@@ -7,6 +7,9 @@ class MyValidator < ActiveModel::Validator
 end
 
 class Topic < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :history
+
   belongs_to :user
   has_many :bookmarks, dependent: :destroy
   validates :title, presence: true
@@ -14,4 +17,6 @@ class Topic < ActiveRecord::Base
 
   include ActiveModel::Validations
   validates_with MyValidator
+
+
 end

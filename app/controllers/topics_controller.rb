@@ -5,6 +5,9 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    if request.path != topic_path(@topic)
+      redirect_to @topic, status: moved_permanently
+    end  
   end
 
   def new

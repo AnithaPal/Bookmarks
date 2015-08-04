@@ -71,5 +71,5 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
-
+gem 'friendly_id', '~> 5.0'
 

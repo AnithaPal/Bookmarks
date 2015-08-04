@@ -36,7 +36,7 @@
           <% @user_likes.each do |like| %>
             <p> <%= link_to "#{like.bookmark.url}", like.bookmark.url%> 
               <%= render partial: 'likes/like', locals: { bookmark: like.bookmark } if current_user %>
-                 <p>
+            <p>
           <% end %>
       </div>
     </div>
