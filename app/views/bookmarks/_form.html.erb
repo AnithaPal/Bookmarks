@@ -8,9 +8,24 @@
       <% end %>
     </ul>
 <% end %>
+
+  <%= form_group_tag(@bookmark.errors[:title]) do %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Enter bookmark title" %>
+    <small><i><span class="glyphicon glyphicon-info-sign"></span>Titles are between 5 and 30 characters</i></small>
+  <% end %>
+
   <%= form_group_tag(@bookmark.errors[:url]) do %>
     <%= f.label :url %>
     <%= f.text_field :url, class: 'form-control', placeholder: "Enter URL" %>
+  <% end %>
+  <%= image_tag(@bookmark.image) %>
+
+  <%= form_group_tag(@bookmark.errors[:image]) do %>
+    <%= f.label :image %>
+    <small class="glyphicon glyphicon-picture inliner"></small>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
   <% end %>
   <div class="form-group text-center">
     <%= f.submit "Save Bookmark", class: 'btn btn-primary' %>

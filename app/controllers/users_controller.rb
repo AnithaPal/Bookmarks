@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def update
     
-    if current_user.update_attributes(user_params)
+    if current_user.update_attributes!(user_params)
       flash[:notice] = "User information updated"
       redirect_to root_path
     else
