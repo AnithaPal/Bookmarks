@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @user_bookmarks = @user.bookmarks
+    @user_bookmarks = @user.bookmarks.group_by{ |b| b.topic}
     @user_likes = @user.likes
     @topics = Topic.all
   end
