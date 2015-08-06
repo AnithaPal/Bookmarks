@@ -2,17 +2,16 @@
 <div class="contanier">
   <div class="row">
     <div class="col-md-2">
-      <button>
         <%= link_to  topics_path,  class: 'btn btn-primary' do %>
-        <i class="glyphicon glyphicon-arrow-left"> </i>&nbsp; 
+         <i class="glyphicon glyphicon-arrow-left"> </i>&nbsp; 
         <% end %>
-      </button>
+      
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center"> @topic.title</h1>
+      <h1 class="text-center"> <%=  @topic.title %></h1>
       <small class=text-center>
         <% if policy(@topic).update? %>
           <div class="btn-group-justify">

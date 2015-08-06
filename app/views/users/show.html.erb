@@ -25,8 +25,9 @@
 
           <% bookmarks.each do |bookmark| %>
             <div class="thumbnail col-md-2">
-              <b><%= bookmark.title %></b> 
+              
               <% if bookmark.thumbnail_url != nil %>
+                <b><%= bookmark.title %></b> 
                 <%= link_to(image_tag(bookmark.thumbnail_url), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>
               <% else %>
                 <%= link_to(image_tag('img_not_available.jpg'), bookmark.url, class: "thumbnail thumb", target: "_blank" ) %>

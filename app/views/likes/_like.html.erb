@@ -1,12 +1,12 @@
 <% if policy(Like.new).create? %>
   <div>
     <% if like = current_user.liked(bookmark) %>
-      <%= link_to [bookmark, like], class: 'btn btn-danger', method: :delete do %>
-        <i class="glyphicon glyphicon-star-empty"> </i>&nbsp; Unlike
+      <%= link_to [bookmark, like], class: 'btn btn-primary', method: :delete do %>
+        <i class="glyphicon glyphicon-heart-empty"> </i>&nbsp; 
       <% end %>
     <% else %>
       <%= link_to [bookmark, Like.new], class: 'btn btn-primary', method: :post do %>
-        <i class="glyphicon glyphicon-star"> </i>&nbsp; Like
+        <i class="glyphicon glyphicon-heart"> </i>&nbsp;
       <% end %>
     <% end %>
   </div>
