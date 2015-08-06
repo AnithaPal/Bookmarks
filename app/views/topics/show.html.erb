@@ -1,21 +1,44 @@
-<div class="container">
+</br>
+<div class="contanier">
   <div class="row">
     <div class="col-md-2">
-      <%= link_to "Back", topics_path,  class: 'btn btn-success' %>
-      <% if policy(@topic).update? %>
-        <%= link_to "Edit Topic", edit_topic_path , class: 'btn btn-success' %>
-        <%= link_to "Delete Topic ", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you wnat to delete this topic and bookmarks under this topic?'} %>
-      <% end %>  
-    
-      <%if policy(Bookmark.new).create? %>
-        <%= link_to "Add new Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-success' %>
-      <% end %>
-    </div>  
-    <div class="col-md-6 col-md-offset-2">
-      <h1 class="text-center"> <%= @topic.title %> </h1>
+      <button>
+        <%= link_to  topics_path,  class: 'btn btn-primary' do %>
+        <i class="glyphicon glyphicon-arrow-left"> </i>&nbsp; 
+        <% end %>
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center"> @topic.title</h1>
+      <small class=text-center>
+        <% if policy(@topic).update? %>
+          <div class="btn-group-justify">
+            <button>
+              <%= link_to edit_topic_path , class: 'btn btn-default btn-xs'  do %>
+                <i class="glyphicon glyphicon-pencil"> </i>&nbsp; 
+              <% end %>
+            </button>
+            <button>
+              <%= link_to @topic, method: :delete, class: 'btn btn-danger btn-xs', data: {confirm: 'Are you sure you wnat to delete this topic and bookmarks under this topic?'} do %>
+                <i class="glyphicon glyphicon-trash"> </i>&nbsp; 
+              <% end %>
+            </button>
+          </div>  
+        <% end %>
+      </small>  
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
       <% @topic.bookmarks.each do |bookmark| %>
        <h4> <%= link_to "#{bookmark.url}", topic_bookmark_path(bookmark.topic, bookmark) %> </h4>
       <% end %>
     </div>
   </div>
+
 </div>
+
