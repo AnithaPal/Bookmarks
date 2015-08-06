@@ -50,6 +50,7 @@ class BookmarksController < ApplicationController
     @topic = Topic.friendly.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
     authorize @bookmark
+    puts @bookmark
     if @bookmark.destroy
       flash[:notice] = "Bookmark was successfully deleted"
       redirect_to topics_path

@@ -16,9 +16,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.body{
-  padding-top: 90px;
-}
+// .body{
+//   padding-top: 90px;
+// }
 
 .head-style{
   padding: 20px;
@@ -30,8 +30,8 @@
 
 }
 
-.content{
-  padding-top: 70px;
+.body-content{
+  padding-top: 90px;
   background-color: white;
   letter-spacing: 0.0625em;
   line-height: 1px;
@@ -41,8 +41,8 @@
   height: 50px;
   float: left;
   width: 100%;
-  border: #81F7D8;
-   background-color: #FF6666; 
+  border-color: #81F7D8;
+  background-color: #FF6666; 
 }
 
 .other-content{
