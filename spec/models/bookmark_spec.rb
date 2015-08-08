@@ -10,4 +10,11 @@ RSpec.describe Bookmark, :type => :model do
     bookmark.valid?
     expect(bookmark.errors[:url]).to include("can't be blank")
   end
+
+  it "is invalid with out a title" do
+    bookmark = build(:bookmark, title: nil)
+    bookmark.valid?
+    expect(bookmark.errors[:title]).to include("can't be blank")
+  end
+
 end
