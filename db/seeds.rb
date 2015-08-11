@@ -49,6 +49,7 @@ topics = Topic.all
 30.times do
   bookmark = Bookmark.new(
     topic: topics.sample,
+    title: Faker::Lorem.word,
     url: Faker::Internet.url('example.com'),
     user: users.sample)
   bookmark.save!
