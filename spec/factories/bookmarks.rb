@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :bookmark do
     association :topic
-    url {Faker::Internet.url('example.com')}
-    title {Faker::Lorem.words}
+    url { Faker::Internet.url('example.com') }
+    title { Faker::Lorem.words }
   end
 end

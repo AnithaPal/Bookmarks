@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Bookmark, :type => :model do
   it "is valid with a url" do
-    expect(build(:bookmark)).to be_valid?
+    expect(build(:bookmark)).to be_valid
   end
 
   it "is invalid with out a url" do

@@ -19,7 +19,7 @@
     <h2 class="text-center"> My Bookmarks </h2>
       <% @user_bookmarks.each do |topic, bookmarks| %>
         <div class="col-md-12 row">
-            <h3> <%= link_to topic.title, topic %> </h3>
+            <h3> <%= link_to "##{topic.title}", topic %> </h3>
         </div>
         <div class="row">
 

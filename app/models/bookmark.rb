@@ -7,6 +7,7 @@ class Bookmark < ActiveRecord::Base
 
   validates :url, presence: true
   validates :url, format: { with: URI::regexp(%w(http https)), message: "This is an invalid URL. It should start with http or https"}
+  validates :title, presence: true
 
   def self.build_card(params)
     bookmark = new(params)
