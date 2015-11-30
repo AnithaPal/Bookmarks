@@ -9,6 +9,7 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <div class="header-spacer"></div>
     <div class="container .body-content">
       <div class="row flash-msg">
         <% if flash[:notice] %>
@@ -28,11 +29,15 @@
           </div>
         <% end %>
       </div>
-      <div class="row col-md-12 other-content">
-        <%= yield %>
+      <div class="row">
+        <div class="row col-md-12 other-content">
+          <%= yield %>
+        </div>
       </div>
-      <div class="row foot-size">
-        <%= render 'layouts/footer' %>
+      <div class="row">
+        <div class="col-md-12 foot-size">
+          <%= render 'layouts/footer' %>
+        </div>
       </div>
     </div>
   </body>
