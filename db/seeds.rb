@@ -9,7 +9,7 @@ require 'faker'
 
 #Create Users
 
-10.times do 
+10.times do
 
   user = User.new(
     name:  Faker::Name.name,
@@ -33,12 +33,12 @@ user = User.new(
 user.skip_confirmation!
 user.save!
 
-users = User.all 
+users = User.all
 
 20.times do
   topic = Topic.new(
     user: users.sample,
-    title: "##{Faker::Lorem.word}"
+    title: "#{Faker::Lorem.word}"
     )
   topic.save!
 
@@ -59,4 +59,3 @@ puts "Seeding Finished"
 puts "#{User.count} users created."
 puts "#{Topic.count} topics created."
 puts "#{Bookmark.count} bookmarks created."
-
